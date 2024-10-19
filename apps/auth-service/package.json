@@ -1,5 +1,5 @@
 {
-  "name": "auth-service",
+  "name": "@money-manager/auth-service",
   "version": "1.0.0",
   "description": "Authentication Microservice for Money Manager Application",
   "main": "index.js",
