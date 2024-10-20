@@ -1,7 +1,7 @@
 {
-  "name": "@money-manager/auth-service",
+  "name": "@money-manager/shared-kernel",
   "version": "1.0.0",
-  "description": "Authentication Microservice for Money Manager Application",
+  "description": "Shared kernel for Money Manager Application",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
