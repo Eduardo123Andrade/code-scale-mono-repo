@@ -141,6 +141,7 @@ describe("src/infrastructure/events/RedisDomainEventHandler", () => {
         payload,
       });
 
+      // @ts-ignore
       await eventHandlers[event.name](dataEvent);
       expect(eventHandlerFunction).toBeCalledWith(event);
     });

@@ -2,7 +2,8 @@
   "name": "@money-manager/shared-kernel",
   "version": "1.0.0",
   "description": "Shared kernel for Money Manager Application",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint",

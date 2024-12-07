@@ -15,6 +15,7 @@ export class RedisDomainEventHandler implements DomainEventHandler {
   }
 
   connect(): Promise<void> {
+    // @ts-ignore
     return this.client.connect();
   }
 
