@@ -1230,7 +1230,7 @@
   dependencies:
     typescript "^5.6.3"
 
-"@money-manager/shared-kernel@file:/media/lordstark/Development/www/code-scale-mono-repo/packages/shared-kernel":
+"@money-manager/shared-kernel@*", "@money-manager/shared-kernel@file:/media/lordstark/Development/www/code-scale-mono-repo/packages/shared-kernel":
   version "1.0.0"
   resolved "file:packages/shared-kernel"
   dependencies:

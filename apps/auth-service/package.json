@@ -16,7 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^5.6.3"
+    "@money-manager/shared-kernel": "*",
+    "typescript": "^5.6.3"  
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
