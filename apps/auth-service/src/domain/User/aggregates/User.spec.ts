@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { User } from "./User";
-import { AggregateRoot, Uuid } from "@money-manager/shared-kernel/dist";
+import {
+  AggregateRoot,
+  UserCreatedEvent,
+  Uuid,
+} from "@money-manager/shared-kernel/dist";
 import { Name } from "../valueObjects/Name/Name";
 import { Email } from "../valueObjects/Email/Email";
 import { HashedPassword } from "../valueObjects/Password/HashedPassword";
@@ -28,12 +32,26 @@ describe("src/domain/User/aggregates/User", () => {
 
         expect(user.id.value).toBe(expectedId.value);
       });
+
+      it("should not add UserCreatedEvent in the events arrays", () => {
+        const expectedId = Uuid.create();
+        const user = User.create({ name, email }, expectedId);
+
+        expect(user.events).toStrictEqual([]);
+      });
     });
+
     describe("when an id is not passed as parameter", () => {
       it("should generate a new id", () => {
         const user = User.create({ name, email });
 
         expect(user.id).toBeInstanceOf(Uuid);
+      });
+
+      it("should add UserCreatedEvent in the events arrays", () => {
+        const user = User.create({ name, email });
+
+        expect(user.events[0]).toBeInstanceOf(UserCreatedEvent);
       });
     });
   });
