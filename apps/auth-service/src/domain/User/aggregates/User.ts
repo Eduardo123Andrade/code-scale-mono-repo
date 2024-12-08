@@ -35,4 +35,14 @@ export class User extends AggregateRoot<UserProps> {
 
     return instance;
   }
+
+  get name(): string {
+    return this.props.name.value;
+  }
+  get email(): string {
+    return this.props.email.value;
+  }
+  get password(): HashedPassword | undefined {
+    return this.props.password;
+  }
 }
