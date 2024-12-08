@@ -1,13 +1,12 @@
-import { describe, expect, it } from "vitest";
-import { User } from "./User";
 import {
   AggregateRoot,
   UserCreatedEvent,
   Uuid,
 } from "@money-manager/shared-kernel/dist";
-import { Name } from "../valueObjects/Name/Name";
+import { describe, expect, it } from "vitest";
 import { Email } from "../valueObjects/Email/Email";
-import { HashedPassword } from "../valueObjects/Password/HashedPassword";
+import { Name } from "../valueObjects/Name/Name";
+import { User } from "./User";
 
 describe("src/domain/User/aggregates/User", () => {
   const name = Name.create("Sheldon");
